@@ -17,15 +17,15 @@ pipeline {
                                                         }
                                                         }
             
-        /*stage('Docker Build and Tag') {
+        stage('Docker Build and Tag') {
                                               steps {
                                                    //sh 'docker build -t nginxt:latest .' 
                                                      sh 'docker build -t demo2:latest .' 
-                                                     sh 'docker tag demo2 anjum1234/demo2:1.2'
-                                                     //sh 'docker tag nginxte anjum1234/nginxte:$BUILD_NUMBER'
+                                                     sh 'docker tag demo2 snehalahire123/demo2:1.2'
+                                                     //sh 'docker tag nginxte snehalahire123/nginxte:$BUILD_NUMBER'
                                                        }
                                                        }
-        stage('Publish image to Docker Hub') {
+        /*stage('Publish image to Docker Hub') {
                                                           steps {
                                                              withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
                                                              sh 'docker push anjum1234/demo2:1.2'
