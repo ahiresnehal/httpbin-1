@@ -20,9 +20,13 @@ pipeline {
         stage('Docker Build and Tag') {
                                               steps {
                                                    //sh 'docker build -t nginxt:latest .' 
-                                                     sh 'docker build -t demo2:latest .' 
-                                                     sh 'docker tag demo2 snehalahire123/demo2:1.2'
+                                                     //sh 'docker build -t demo2:latest .' 
+                                                     //sh 'docker tag demo2 snehalahire123/demo2:1.2'
                                                      //sh 'docker tag nginxte snehalahire123/nginxte:$BUILD_NUMBER'
+                                                
+                                                sh 'docker build -t nginxtest:latest .'
+                                                 sh 'docker tag nginxtest snehalahire123/nginxtest:latest'
+                                                 sh 'docker tag nginxtest snehalahire123/nginxtest:$BUILD_NUMBER'
                                                        }
                                                        }
         stage('Publish image to Docker Hub') {
