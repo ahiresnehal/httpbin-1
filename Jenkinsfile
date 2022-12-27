@@ -32,7 +32,7 @@ pipeline {
         stage('Publish image to Docker Hub') {
                                                           steps {
                                                              withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-                                                             sh 'docker push snehalahire123/demo2:1.2'
+                                                             sh 'docker push snehalahire123/nginxtest:latest'
                                                               //sh 'docker push snehalahire123/nginxte:$BUILD_NUMBER' 
                                                               }
                                                               }
