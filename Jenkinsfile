@@ -13,7 +13,7 @@ pipeline {
                                                }
                          stage('git clone') {
                                               steps {
-                                         git credentialsId: 'github', url: ''
+                                         git credentialsId: 'github', url: 'https://github.com/ahiresnehal/httpbin-1.git'
                                                         }
                                                         }
             
@@ -42,8 +42,3 @@ pipeline {
                                                  }*/
   }
   }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-
