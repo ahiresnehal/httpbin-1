@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: http-deployment
+
+  labels:
+
+    app: http
+
+spec:
+
+  replicas: 2
+
+  selector:
+
+    matchLabels:
+
+      app: http
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: http
+
+    spec:
+
+      containers:
+
+        - name: flask
+                                 
+          image: docker.io/snehalahire123/nginxtest:latest
+
+          imagePullPolicy: Always
+
+          ports:
+
+            - containerPort:  5000
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-service
+spec:
+  ports:
+  - port:  5000
+    protocol: TCP
+    targetPort:  5000
+  selector:
+    app: flask
+  type: NodePort
