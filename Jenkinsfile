@@ -40,7 +40,7 @@ pipeline {
         stage('deploy to rancher') {
                                        steps {
                                         script{
-                                                 sh 'kubectl apply -f deploymentservice.yaml'
+                                                 sh 'docker images'
                                                  }
                                                  }
                                                  }
