@@ -41,7 +41,6 @@ pipeline {
                                        steps {
                                         script{
                                                  sh 'docker images'
-                                                 sh 'docker container run -d -it – name container1 snehalahire123/nginxtest:latest'
                                                  }
                                                  }
                                                  }
