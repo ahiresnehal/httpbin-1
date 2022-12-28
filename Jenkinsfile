@@ -37,12 +37,12 @@ pipeline {
                                                               }
                                                               }
                                                               }
-        /*stage('deploy to rancher') {
+        stage('deploy to rancher') {
                                        steps {
                                         script{
-                                                 kubernetesDeploy (configs: 'deploymentservice.yaml', kubeconfigId: 'rancherconfih')
+                                                 sh 'kubectl apply -f deploymentservice.yaml'
                                                  }
                                                  }
-                                                 }*/
+                                                 }
   }
   }
