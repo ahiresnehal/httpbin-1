@@ -15,7 +15,7 @@ spec:
      spec:
       containers:
         - name: c00
-          image: docker.io/snehalahire123/nginxtest:latest
+          image: docker.io/snehalahire123/nginxtest:v1
           ports:
           - containerPort: 80
 ---
