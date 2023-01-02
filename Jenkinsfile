@@ -24,15 +24,15 @@ pipeline {
                                                      //sh 'docker tag demo2 snehalahire123/demo2:1.2'
                                                      //sh 'docker tag nginxte snehalahire123/nginxte:$BUILD_NUMBER'
                                                 
-                                                sh 'docker build -t nginxtest:1.2 .'
-                                                 sh 'docker tag nginxtest snehalahire123/nginxtest:1.2'
-                                                 sh 'docker tag nginxtest snehalahire123/nginxtest:$BUILD_NUMBER'
+                                                sh 'docker build -t my-nginx-image .'
+                                                 sh 'docker tag nginxtest snehalahire123/my-nginx-image'
+                                                 sh 'docker tag nginxtest snehalahire123/my-nginx-image:$BUILD_NUMBER'
                                                        }
                                                        }
         stage('Publish image to Docker Hub') {
                                                           steps {
                                                              withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-                                                             sh 'docker push snehalahire123/nginxtest:1.2'
+                                                             sh 'docker push snehalahire123/my-nginx-image'
                                                               //sh 'docker push snehalahire123/nginxte:$BUILD_NUMBER' 
                                                               }
                                                               }
