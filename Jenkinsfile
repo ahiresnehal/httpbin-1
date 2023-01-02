@@ -42,8 +42,7 @@ pipeline {
                                         script{
                                                  sh 'docker images'
                                                  sh 'ls'
-                                                 sh 'kubectl apply -f deploymentservice.yaml'
-                                                 sh 'kubectl get all'
+                                                
                                                  }
                                                  }
                                                  }
