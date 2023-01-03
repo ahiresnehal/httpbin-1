@@ -24,9 +24,9 @@ pipeline {
                                                      //sh 'docker tag demo2 snehalahire123/demo2:1.2'
                                                      //sh 'docker tag nginxte snehalahire123/nginxte:$BUILD_NUMBER'
                                                 
-                                                sh 'sudo docker build -t my-nginx-image .'
-                                                 sh 'sudo docker tag nginxtest snehalahire123/my-nginx-image'
-                                                 sh 'sudo docker tag nginxtest snehalahire123/my-nginx-image:$BUILD_NUMBER'
+                                                sh 'docker build -t my-nginx-image .'
+                                                 sh 'docker tag nginxtest snehalahire123/my-nginx-image'
+                                                 sh 'docker tag nginxtest snehalahire123/my-nginx-image:$BUILD_NUMBER'
                                                        }
                                                        }
         stage('Publish image to Docker Hub') {
