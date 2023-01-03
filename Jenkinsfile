@@ -39,7 +39,8 @@ pipeline {
                                                               }
         stage('deploy to rancher') {
                                        steps {
-                                        script{
+                                        script{  
+                                                 sh 'docker pull snehalahire123/my-nginx-image:latest'
                                                  sh 'docker images'
                                                  sh 'ls'
                                                 
